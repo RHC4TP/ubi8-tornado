@@ -25,7 +25,7 @@ RUN pip3 install --upgrade pip
 # Install Tornado
 RUN pip3 install tornado
 
-# Copy config and website files
+# Copy server script
 COPY helloworld.py /usr/lib64/python3.6/site-packages/tornado/helloworld.py
 
 # Expose port
