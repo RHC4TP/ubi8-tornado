@@ -13,8 +13,6 @@ LABEL name="ubi8-tornado" \
       description="Tornado web server for UBI 8" \
       maintainer="pcsherid"
 
-USER root
-
 # Update base image
 RUN yum update --disablerepo=* --enablerepo=ubi-8-appstream --enablerepo=ubi-8-baseos -y && rm -rf /var/cache/yum
 
