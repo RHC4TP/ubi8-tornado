@@ -8,7 +8,6 @@ LABEL name="ubi8-tornado" \
       vendor="pcsherid" \
       version="0.1.0" \
       release="1" \
-      run='' \
       summary="UBI 8 Tornado server" \
       description="Tornado web server for UBI 8" \
       maintainer="pcsherid"
@@ -24,13 +23,16 @@ RUN pip3 install --upgrade pip
 RUN pip3 install tornado
 
 # Copy server script
-COPY helloworld.py /usr/lib64/python3.6/site-packages/tornado/helloworld.py
+COPY helloworld.py $HOME/helloworld.py
 
 # Expose port
 EXPOSE 8888
 
+# Switch to a non-root user (container will now run non-root)
+USER 1001
+
 # Start the service
-CMD python3 /usr/lib64/python3.6/site-packages/tornado/helloworld.py
+CMD python3 $HOME/helloworld.py
 
 # Always include a software license in the default location
 # Required for Red Hat container certification
