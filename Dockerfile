@@ -5,12 +5,12 @@ FROM registry.access.redhat.com/ubi8/ubi
 
 # Required Atomic/OpenShift Labels - https://github.com/projectatomic/ContainerApplicationGenericLabels
 LABEL name="ubi8-tornado" \
-      vendor="pcsherid" \
+      vendor="Red Hat" \
       version="0.1.0" \
       release="1" \
       summary="UBI 8 Tornado server" \
       description="Tornado web server for UBI 8" \
-      maintainer="pcsherid"
+      maintainer="rhc4tp"
 
 # Update base image
 RUN yum update --disablerepo=* --enablerepo=ubi-8-appstream --enablerepo=ubi-8-baseos -y && rm -rf /var/cache/yum
