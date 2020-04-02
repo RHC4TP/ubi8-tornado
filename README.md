@@ -5,11 +5,11 @@ This Dockerfile defines an image for building a Red Hat Universal Base Image (UB
 
 ## Build with buildah
 ```bash
-$ buildah bud -t pcsherid/ubi8-tornado .
+$ buildah bud -t rhc4tp/ubi8-tornado .
 ```
 
 ## Run and test with podman
 ```bash
-$ podman run -d -p 8888:8888 pcsherid/ubi8-tornado
+$ podman run -d -p 8888:8888 rhc4tp/ubi8-tornado
 $ curl http://localhost:8888
 ```
