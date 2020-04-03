@@ -10,6 +10,6 @@ $ buildah bud -t rhc4tp/ubi8-tornado .
 
 ## Run and test with podman
 ```bash
-$ podman run -d -p 8888:8888 rhc4tp/ubi8-tornado
+$ podman run -d -p 8888:8888 localhost/rhc4tp/ubi8-tornado
 $ curl http://localhost:8888
 ```
